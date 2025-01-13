@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      เพิ่มสินค้า
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item class="mt-3">
+    <ion-input type="text" [(ngModel)]="txtname" placeholder="ชื่อสินค้า"></ion-input>
+  </ion-item>
+
+  <ion-item class="mt-2">
+    <ion-input type="text" [(ngModel)]="txtprice" placeholder="ราคาสินค้า"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="file" accept="image/*" (change)="onFileChange($event)"></ion-input>
+  </ion-item>
+
+  <ion-button class="mt-3" expand="block" color="success" (click)="addproduct()">บันทึก</ion-button>
+</ion-content>
+

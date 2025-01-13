@@ -1,0 +1,7 @@
+{
+  "name": "app-crud-image",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
