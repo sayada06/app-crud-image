@@ -45,6 +45,7 @@ export class AddproductPage implements OnInit {
         this.txtname = "";
         this.txtprice = "";
         this.selectedFile = null;
+        window.location.href = '/showproduct';
       },
       error: (err) => {
         console.error("เกิดข้อผิดพลาดในการบันทึกข้อมูล", err);

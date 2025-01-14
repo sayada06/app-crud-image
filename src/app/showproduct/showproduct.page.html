@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>สินค้า</ion-title>
+    <ion-button slot="end" shape="round" color="success" (click)="goToaddproduct()">เพิ่มสินค้า</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>สินค้า</ion-card-title>
+      <ion-card-subtitle>สินค้าภายในร้าน</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list  *ngFor="let pro of products">
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" [src]="'http://127.0.0.1/crudapi/'+ pro.image" />
+          </ion-thumbnail>
+          <ion-label>{{ pro.name }}
+            <p>{{ pro.price }} บาท</p>
+          </ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

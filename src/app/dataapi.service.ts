@@ -13,4 +13,8 @@ export class DataapiService {
   add(fromData:any){
     return this.http.post('http://127.0.0.1/crudapi/upload.php',fromData)
   }
+
+  showproduct(){
+    return this.http.get('http://127.0.0.1/crudapi/Read.php');
+  }
 }
