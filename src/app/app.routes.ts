@@ -18,4 +18,8 @@ export const routes: Routes = [
     path: 'showproduct',
     loadComponent: () => import('./showproduct/showproduct.page').then( m => m.ShowproductPage)
   },
+  {
+    path: 'edit',
+    loadComponent: () => import('./edit/edit.page').then( m => m.EditPage)
+  },
 ];

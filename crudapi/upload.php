@@ -4,7 +4,7 @@ include('config.php'); // ดึงไฟล์เชื่อมต้อฐา
 $message = [];
 try {
     if(!isset($_FILES['image']) || $_FILES['image']['error']!=UPLOAD_ERR_OK){
-        throw new EXCEPTION ("รูปภาพไม่ถูกต้อง");
+        throw new EXCEPTION ("รุปภาพไม่ถูกต้อง");
     }
 
 $image =$_FILES['image'];

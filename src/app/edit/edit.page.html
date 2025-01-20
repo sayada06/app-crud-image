@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>แก้ไขสินค้า</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>แก้ไขข้อมูลสินค้า</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="updateProduct()">
+        <ion-item>
+          <ion-label position="floating">ชื่อสินค้า</ion-label>
+          <ion-input [(ngModel)]="product.name" name="name" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">ราคา</ion-label>
+          <ion-input [(ngModel)]="product.price" name="price" required type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label style="margin-right: 15px;">รูปภาพ </ion-label>
+          <input type="file" (change)="onFileChange($event)" />
+        </ion-item>
+        <ion-button expand="full" type="submit" >อัปเดตสินค้า</ion-button>
+        <ion-button expand="full" color="warning" (click)="cancelEdit()">ยกเลิก</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

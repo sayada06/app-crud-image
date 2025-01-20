@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>สินค้า</ion-title>
-    <ion-button slot="end" shape="round" color="success" (click)="goToaddproduct()">เพิ่มสินค้า</ion-button>
+    <ion-button slot="end" shape="round" color="success" (click)="addproduct()">เพิ่มสินค้า</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -21,6 +21,8 @@
           <ion-label>{{ pro.name }}
             <p>{{ pro.price }} บาท</p>
           </ion-label>
+          <ion-button color="warning" shape="round" (click)="editProduct(pro)">แก้ไข</ion-button>
+          <ion-button color="danger" shape="round" (click)="deletepro(pro.id)">ลบข้อมูล</ion-button>
         </ion-item>
 
       </ion-list>
